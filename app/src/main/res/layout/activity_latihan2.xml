@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Latihan2Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="Menghitung Nilai Akhir Mahasiswa "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="2dp">
+
+    <!--        Nama -->
+    <TextView
+        android:id="@+id/tv_Nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama : "
+        android:textSize="15dp" />
+
+        <!--        Nim Mahasiswa-->
+
+        <EditText
+            android:id="@+id/ed_Nama"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp" />
+
+        <TextView
+            android:id="@+id/tv_Nim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_Nama"
+            android:layout_marginTop="32dp"
+            android:text="NIM : "
+            android:textSize="15dp" />
+
+        <!--        Nilai Uas -->
+
+        <EditText
+            android:id="@+id/etd_Nim"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ed_Nama"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="-8dp" />
+
+        <TextView
+            android:id="@+id/tv_NilaiUas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_Nim"
+            android:layout_marginTop="32dp"
+            android:text="Nilai Uas: "
+            android:textSize="15dp" />
+
+        <!--        Nilai Tugas -->
+
+        <EditText
+            android:id="@+id/etd_NilaiUas"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etd_Nim"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/tv_NilaiUts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_NilaiUas"
+            android:layout_marginTop="32dp"
+            android:text="Nilai Uts "
+            android:textSize="15dp" />
+
+        <!-- Nilai Tugas -->
+
+        <EditText
+            android:id="@+id/ed_NilaiUts"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etd_NilaiUas"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="-2dp" />
+
+        <TextView
+            android:id="@+id/tv_NilaiTugas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_NilaiUts"
+            android:layout_marginTop="32dp"
+            android:text="Nilai Tugas: "
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/etd_NilaiTugas"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ed_NilaiUts"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="11dp" />
+
+        <Button
+            android:id="@+id/btn_hitungMahasiswa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_NilaiTugas"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Hitung" />
+
+        <Button
+            android:id="@+id/btn_ResetMahasiswa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_NilaiTugas"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@+id/btn_hitungMahasiswa"
+            android:text="Reset" />
+
+<!--        asasssssssssssssssssssssssssssssss-->
+
+        <!--        Hasil -->
+
+        <!--    Hasil  Umur anda  -->
+        <TextView
+            android:id="@+id/tv_hasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_hitungMahasiswa"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="10dp"
+            android:text="Hasil :"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_umurAnda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hasil"
+            android:text="Nama Mahasiswa : "
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_umurHasil1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hasil"
+            android:layout_toRightOf="@+id/tv_umurAnda"
+            android:text=" - "
+            android:textSize="15dp" />
+
+        <!--       Hasil Tinggi anda -->
+
+        <TextView
+            android:id="@+id/tv_Tinggi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_umurAnda"
+            android:text="Tinggi Badan: "
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_TinggiHasil1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_umurHasil1"
+            android:layout_toRightOf="@+id/tv_umurAnda"
+            android:text="   - "
+            android:textSize="15dp" />
+
+        <!--      Hasil  Berat Badan -->
+
+        <TextView
+            android:id="@+id/tv_HBB"
+            android:layout_below="@+id/tv_TinggiHasil1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIM: "
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_BBHasil1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_TinggiHasil1"
+            android:layout_toRightOf="@+id/tv_umurAnda"
+            android:text=" - "
+            android:textSize="15dp" />
+
+        <!--        Hasil BMI Anda -->
+
+        <TextView
+            android:id="@+id/tv_HBmi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_HBB"
+            android:text="UAS: "
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_Uas2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_BBHasil1"
+            android:layout_toRightOf="@+id/tv_umurAnda"
+            android:text=" - "
+            android:textSize="15dp" />
+
+        <!--        Kategori -->
+
+        <TextView
+            android:id="@+id/tv_uts"
+            android:layout_below="@+id/tv_HBmi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UTS: "
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_hasiluts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_Uas2"
+            android:layout_toRightOf="@+id/tv_umurAnda"
+            android:text=" - "
+            android:textSize="15dp" />
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_Total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_ResetMahasiswa"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="115dp"
+            android:layout_marginBottom="-97dp"
+            android:text="Total:" />
+
+
+        <TextView
+            android:id="@+id/tv_HasilTotal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_Total1"
+            android:layout_marginEnd="-113dp"
+            android:layout_marginBottom="25dp"
+            android:layout_toStartOf="@+id/tv_Total1"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/tv_Ratarata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_ResetMahasiswa"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="109dp"
+            android:layout_marginBottom="-154dp"
+            android:text="Nilai Huruf:" />
+
+        <TextView
+            android:id="@+id/tv_HasilRatarata1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_Total1"
+            android:layout_marginEnd="-117dp"
+            android:layout_marginBottom="-31dp"
+            android:layout_toStartOf="@+id/tv_Total1"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/tv_Total1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_ResetMahasiswa"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="110dp"
+            android:layout_marginBottom="-126dp"
+            android:text="Rata-Rata Nilai:" />
+
+        <TextView
+            android:id="@+id/tv_HasilRatarata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_Total1"
+            android:layout_marginEnd="-114dp"
+            android:layout_marginBottom="-2dp"
+            android:layout_toStartOf="@+id/tv_Total1"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/tv_Statuslulus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_ResetMahasiswa"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="101dp"
+            android:layout_marginBottom="-180dp"
+            android:text="Status Lulus:" />
+
+        <TextView
+            android:id="@+id/tv_hasillulus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_Total1"
+            android:layout_marginEnd="-123dp"
+            android:layout_marginBottom="-59dp"
+            android:layout_toStartOf="@+id/tv_Total1"
+            android:text="-" />
+    </RelativeLayout>
+</LinearLayout>
